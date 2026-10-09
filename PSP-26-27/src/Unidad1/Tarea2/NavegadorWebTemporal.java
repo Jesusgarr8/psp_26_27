@@ -1,8 +1,5 @@
 package Unidad1.Tarea2;
-<<<<<<< HEAD
 
-public class NavegadorWebTemporal {
-=======
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -23,17 +20,16 @@ public class NavegadorWebTemporal {
     }
 
 
-
     static void main(String[] args) {
         String ruta = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
         Scanner sc = new Scanner(System.in);
 
-        while(true){
+        while (true) {
 
             System.out.println("Introduce un enlace");
             String enlace = sc.nextLine();
             NavegadorWebTemporal rt = new NavegadorWebTemporal();
-            rt.runtime(ruta,enlace);
+            rt.runtime(ruta, enlace);
             try {
                 Thread.sleep(5000);
             } catch (InterruptedException e) {
@@ -42,5 +38,5 @@ public class NavegadorWebTemporal {
         }
 
     }
->>>>>>> 4ebc2113c8f1f7aeea5ce40087538c6738ace0bf
+
 }
