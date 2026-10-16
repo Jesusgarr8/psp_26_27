@@ -49,7 +49,7 @@ public class lanzar_procesos {
             System.out.println(ruta);
             System.out.println(url);
         } else {
-            System.out.println("Error, número incorrecto de paraametros.");
+            System.out.println("Error, número incorrecto de parametros.");
         }
     }
 }
