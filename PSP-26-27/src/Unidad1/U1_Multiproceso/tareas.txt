@@ -1,0 +1,5 @@
+# Las líneas que empiezan por # son comentarios
+ls -l
+echo Hola desde un proceso hijo
+cat fichero_que_no_existe.txt
+sleep 30

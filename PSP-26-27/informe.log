@@ -1,0 +1,8 @@
+[Tarea 1] ls -l -> código 1 (80 ms)
+[Tarea 2] echo Hola desde un proceso hijo -> código 0 (126 ms)
+[Tarea 3] cat fichero_que_no_existe.txt -> código 1 (105 ms)
+[Tarea 4] sleep 30 -> código 1 (67 ms)
+[Tarea 1] ls -l -> código 1 (66 ms)
+[Tarea 2] echo Hola desde un proceso hijo -> código 0 (58 ms)
+[Tarea 3] cat fichero_que_no_existe.txt -> código 1 (64 ms)
+[Tarea 4] sleep 30 -> código 1 (61 ms)

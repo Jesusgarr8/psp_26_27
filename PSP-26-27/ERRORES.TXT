@@ -1,0 +1,12 @@
+"ls" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+"cat" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+"sleep" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+"ls" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+"cat" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+"sleep" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
