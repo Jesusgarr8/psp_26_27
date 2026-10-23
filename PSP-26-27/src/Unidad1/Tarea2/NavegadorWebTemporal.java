@@ -1,42 +1,32 @@
 package Unidad1.Tarea2;
 
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class NavegadorWebTemporal {
     private static final Logger logger = Logger.getLogger(NavegadorWebTemporal.class.getName());
+    private static final String RUTA_NAVEGADOR = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
 
-    public void runtime(String ruta, String enlace) {
-        String[] comandos = new String[2];
-        comandos[0] = (ruta);
-        comandos[1] = (enlace);
-        try {
-            Runtime rt = Runtime.getRuntime();
-            rt.exec(comandos);
-        } catch (Exception e) {
-            logger.log(Level.SEVERE, "Error ejecutando el proceso", e);
-        }
-    }
-
-
-    static void main(String[] args) {
-        String ruta = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        while (true) {
-
-            System.out.println("Introduce un enlace");
-            String enlace = sc.nextLine();
-            NavegadorWebTemporal rt = new NavegadorWebTemporal();
-            rt.runtime(ruta, enlace);
-            try {
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+        String direccion;
+        do {
+            System.out.print("¿Qué dirección web desea consultar? (FIN para salir): ");
+            direccion = sc.nextLine().trim();
+            if (!direccion.equalsIgnoreCase("FIN")) {
+                try {
+                    ProcessBuilder pb = new ProcessBuilder(RUTA_NAVEGADOR, direccion);
+                    pb.start();
+                    // Esperamos 10 segundos antes de volver a preguntar
+                    Thread.sleep(10000);
+                } catch (IOException e) {
+                    logger.log(Level.SEVERE, "No se pudo abrir el navegador: " + e.getMessage());
+                } catch (InterruptedException e) {
+                    logger.log(Level.SEVERE, "Espera interrumpida");
+                }
             }
-        }
-
+        } while (!direccion.equalsIgnoreCase("FIN"));
     }
-
 }

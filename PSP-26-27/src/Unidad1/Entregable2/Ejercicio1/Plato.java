@@ -5,12 +5,11 @@ import java.util.Scanner;
 public class Plato {
 
 
-    static void main(String[] args) {
+    public static void main(String[] args) {
+
+        String plato = args[0];
         String preparacion = "";
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Elige un plato (salmorejo, gazpacho, pescaito, tortillita");
-        String plato = sc.nextLine();
-        if (plato.equals("salmoorejo")) {
+        if (plato.equals("salmorejo")) {
             preparacion = "el salmorejo se hace asin";
         } else if (plato.equals("gazpacho")) {
             preparacion = "el gazpacho se hace asao";
