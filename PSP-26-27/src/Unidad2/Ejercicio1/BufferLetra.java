@@ -18,7 +18,6 @@ public class BufferLetra {
     }
 
     public synchronized char cogerLetra() {
-        //disponible = false;
         while (!disponible) {
             try {
                 wait();
